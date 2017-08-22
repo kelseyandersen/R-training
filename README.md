@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/kelseyandersen/R-training/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+setwd("/Users/Kelsey/Dropbox/Graduate School UF/Coursework/Fall 2017/Networks")
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#install.packages("ggplot2")
+library(ggplot2)
 
-```markdown
-Syntax highlighted code block
+RustData <- read.csv("StripeRust.csv", header = TRUE)
 
-# Header 1
-## Header 2
-### Header 3
+head(RustData)
 
-- Bulleted
-- List
+RustData
 
-1. Numbered
-2. List
+## Graph by 
 
-**Bold** and _Italic_ and `Code` text
+WithR <- c(8.5, 6.5, 4, 1, 3, 10, 5, 5, 5, 1, 1, 6, 6)
 
-[Link](url) and ![Image](src)
-```
+WithR
+summary(WithR)
+hist(WithR, xlab = "Self-Reported R Proficiency")
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+ggplot(data = RustData) +
+  geom_point(mapping = aes(x = DAI, y = Severity, color = Year))
+  
+ggplot(data = RustData) +
+  geom_line(mapping = aes(x = DAI, y = Severity, color = Year))
 
-### Jekyll Themes
+ggplot(data = RustData) +
+  geom_line(mapping = aes(x = DAI, y = Severity, color = Year))
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kelseyandersen/R-training/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+ggplot(data = RustData) +
+  geom_point(mapping = aes(x = DAI, y = Severity)) +
+  facet_wrap(~Year) +
+  labs(title = "Stripe Rust Severity Over Time")
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
