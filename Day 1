@@ -1,3 +1,14 @@
+library("rmarkdown")
+
+name: "Day 1"
+navbar:
+  title: "Set Directory"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+
 
 
 ---
