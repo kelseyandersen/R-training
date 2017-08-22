@@ -7,15 +7,14 @@ date: "August 22, 2017"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
+### Set Working Directory
 ```{r set working directory}
 setwd("/Users/Kelsey/Dropbox/Graduate School UF/Coursework/Fall 2017/Networks")
 ```
 
-#install.packages("ggplot2")
+
+###
+install.packages("ggplot2")
 library(ggplot2)
 
 RustData <- read.csv("StripeRust.csv", header = TRUE)
