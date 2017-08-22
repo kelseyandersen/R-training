@@ -1,7 +1,19 @@
 
 
+---
+title: "R Training"
+author: "Kelsey Andersen"
+date: "August 22, 2017"
+output: html_document
+---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r set working directory}
 setwd("/Users/Kelsey/Dropbox/Graduate School UF/Coursework/Fall 2017/Networks")
+```
 
 #install.packages("ggplot2")
 library(ggplot2)
